@@ -68,6 +68,21 @@ For a class size of 18, there is are 2:1 odds
 
 
 3. How much money would Brownlow be expected to end up with if the bets went as described.
+```{r}
+BrLwarray <- numeric(1000)
+
+for (i in 1:1000) {
+  BrLwarray[i] <- BrLw()
+}
+SBrLwarray <- sort(BrLwarray)
+```
+
+```{r}
+print(BrLwarray[25])
+print(BrLwarray[975])
+```
+
+
 
 ## Our strategy is to build a Function and the use it to answer the three questions. 
 
